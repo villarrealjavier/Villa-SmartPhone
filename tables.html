@@ -6,22 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Static Navigation - SB Admin</title>
+        <title>Tables - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-        <style type="text/css">
-            div.Ejemplos {
-            width: 96%;
-            max-width: 960px;
-            margin: 0 auto;
-            }
-            .Ejemplos img {
-            width: 100%;
-            height: auto;
-            }
-        </style>
     </head>
-    <body>
+    <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html">VILLA SMARTPHONE</a>
@@ -71,7 +61,7 @@
                             </div>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-sidenav-light.html">Estado: Reacondicionado</a>
+                                    <a class="nav-link" href="layout-static.html">Estado: Reacondicionado</a>
                                     
                                 </nav>
                             </div>
@@ -127,69 +117,131 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">¿Qué el estado Nuevo?</h1>
+                        <h1 class="mt-4">Dispositivos mejor valorados del año</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                            <li class="breadcrumb-item active"><b>¿Que es el Estado Nuevo?</b></li>
+                            <li class="breadcrumb-item active">Dispositivos mejor valorados del año</li>
                         </ol>
-                        <hr color="black">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <p class="mb-0">
-                                    El estado nuevo indica que el producto procede de la empresa oficial, es decir que a su misma vez está totalmente nuevo, perfectamente embalado
-                                    y con todos sus productos y accesorios los cuales incluiría al igual que si realizas la transicción o compra de la página oficial de la cual procede el producto,
-                                    como por ejemplo comprar un producto iPhone 13 PRO de la tienda Oficial de Apple.
-
-                                </p>
-                                
+                               <p>
+                                Si no sabes qué móvil comprar, pero tienes claro que quieres apostar por uno de gama alta, nuestro <b>ranking</b> recoge los lanzamientos de grandes firmas que ya pueden adquirirse en tiendas. 
+                                Como esta lista se actualiza periódicamente, tendrás a tu disposición y en todo momento una valoración clara de los mejores móviles del mercado. Además de darte los precios libres, te contamos cuánto te costarían si los pagaras a plazos con cada operador. 
+                                Esta opción de financiación, eso sí, depende de que te des de alta en alguna de las tarifas de cada compañía.
+                               </p>
                             </div>
-                            
                         </div>
-                        <h4>Garantía del producto</h4>
                         <div class="card mb-4">
                             <div class="card-body">
-                                <p class="mb-0">
-                                    <p>En Villa SmartPhone queremos ofrecer a nuestros clientes la mayor tranquilidad posible a la hora de elegir productos reacondicionados.</p>
-
-                                    <p>Por eso, tras los 12 meses de garantía del vendedor por defectos técnicos, Villa SmartPhone añade 12 meses más de protección.</p>
-                                    
-                                    <p>Así, con la garantía del vendedor (12 meses) y la garantía de Back Villa SmartPhone (12 meses más), todos nuestros dispositivos cuentan con 24 meses de garantía técnica incluida.</p>
-                                    
-                                    <p>Esta garantía de 2 años cubre cualquier fallo técnico (hardware y software) que no haya sido causado por su mal uso. En caso de que el dispositivo sea defectuoso o presente algún problema de funcionamiento, el vendedor tiene la obligación de ofrecer una reparación o reemplazo.<br>
-                                        Solo se podrá solicitar un reembolso si el vendedor NO puede reparar o sustituir el aparato. La garantía NO cubre pantallas agrietadas o daños en el dispositivo causados por el cliente. 
-                                    </p>
-                                </p>
+                                <div class="imagentabla1">
+                                    <img src="imagenranking1.jpg">
+                                </div>
                             </div>
                         </div>
-                        <h4>Condiciones de la garantía en Villa SmartPhone</h4>
+                            <div class="imagentabla1">
+                                <img src=""
+                            </div>
+                        <h3>Ranking</h3>
                         <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Dispositivos mejores valorados
+                            </div>
                             <div class="card-body">
-                                <p class="mb-0">
-                                    <ol type="1">
-                                        <li>Están cubiertos por la garantía averías y problemas de funcionamiento del dispositivo independientemente de su uso (pantalla táctil, batería, botones, etc.) </li>
-                                        <li>No se aplica la garantía en caso de caída/impacto fuerte o oxidación por exposición al agua. </li>
-                                        <li>La apertura del producto por un tercero (que no sea el reacondicionador) también es supone una exclusión de la garantía.                                        </li>
-                                        <li>Es importante recordar que el sellado original nunca se conserva en productos reacondicionados. Durante el reacondicionamiento, los dispositivos se abren para poder realizar pruebas en el producto, es por esta razón que no se garantiza la resistencia al agua en los productos reacondicionados vendidos en Villa SmartPhone.</li>
-                                    </ol>
-                                </p>
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Modelo</th>
+                                            <th>Sistema Operativo</th>
+                                            <th>Marca</th>
+                                            <th>Precio</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Modelo</th>
+                                            <th>Sistema Operativo</th>
+                                            <th>Marca</th>
+                                            <th>Precio</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>iPhone 13 PRO</td>
+                                            <td>IOS 15</td>
+                                            <td>Apple</td>
+                                            <td>1.300€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Samgun Galaxy S21 Ultra</td>
+                                            <td>Android 12</td>
+                                            <td>Samsung</td>
+                                            <td>1.100€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>iPhone 12 PRO Max</td>
+                                            <td>IOS 15</td>
+                                            <td>Apple</td>
+                                            <td>1.200€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Xiaomi Mi 11 Ultra</td>
+                                            <td>Android 12</td>
+                                            <td>Xiaomi</td>
+                                            <td>1.600€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Oppo Find X3 Pro</td>
+                                            <td>Android 11</td>
+                                            <td>Oppo</td>
+                                            <td>794€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Huawei Mate 40 Pro</td>
+                                            <td>Android 12</td>
+                                            <td>Huaweu</td>
+                                            <td>1.200€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Samsung Galaxy Z Fold 3</td>
+                                            <td>Android 12</td>
+                                            <td>Samusung</td>
+                                            <td>1.700€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Oppo Reno 6 Pro</td>
+                                            <td>Android 11</td>
+                                            <td>Oppo</td>
+                                            <td>759€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>One Plus 9 Pro</td>
+                                            <td>Android 11</td>
+                                            <td>One Plus </td>
+                                            <td>969€</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Samsung Galaxy Z Flip 3</td>
+                                            <td>Android 12</td>
+                                            <td>Samsung</td>
+                                            <td>1.300€</td>
+                                            
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <h4>Ejemplo de Dispositivo en estado Nuevo:</h4>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <p class="mb-0">
-                                    
-                                    <div class="Ejemplos">
-                                        <img src="Fondo_estadonuevo.png" width="960" height="640" />
-                                    </div>
-
-                                </p>
-                                
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="card mb-4"><div class="card-body">Si sigue teniendo alguna duda puede contactarnos al siguiente correo: "villarrealhinojojavier@gmail.com"</div></div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -208,5 +260,7 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>
